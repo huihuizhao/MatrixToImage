@@ -25,33 +25,56 @@ public class ReadData {
 				// }
 				// }
 
-				String[][] ValueMatrix = new String[10][10];
+				String[][] ValueMatrix = new String[100][100];
 				// read.close();
 
 				// read = new InputStreamReader(new FileInputStream(file),
 				// encoding);// ���ǵ������ʽ
 				// bufferedReader = new BufferedReader(read);
-//				int i = 0;
+				// int i = 0;
+				
+				String[] lineValues = null;
 				while ((lineTxt = bufferedReader.readLine()) != null) {
 					if (!lineTxt.startsWith("*") && !lineTxt.startsWith("#")) {
-						String[] lineValues = lineTxt.trim().split("\\s+");// �Զ���ո�ָ�
-						int vL = lineValues.length;
-						for (int s = 0; s < vL; s++) {
-
-							for (int i = 0; i < ValueMatrix.length; i++) {
-								for (int j = 0; j < ValueMatrix[0].length; j++) {
-									ValueMatrix[i][j] = lineValues[i*10+j];
-								}
-							}
-
-						}
-
-						System.out.println(lineTxt);
-//						i++;
+						lineValues = lineTxt.trim().split("\\s+");// �Զ���ո�ָ�
+//						int vL = lineValues.length;
+//						for (int s = 0; s < vL; s++) {
+//							for (int i = 0; i < ValueMatrix.length; i++) {
+//								for (int j = 0; j < ValueMatrix[0].length; j++) {
+//
+//									//
+//
+//									ValueMatrix[i][j] = lineValues[s];
+//									//
+//									// System.out.println("lineValues[j]"+j+":"+lineValues[j]);
+//									// System.out.println("ValueMatrix[s][j]"+s+":"+j+":"+lineValues[j]);
+//								}
+//							}
+//						}
+						// System.out.println(lineTxt);
+						// i++;
 
 					}
 
 				}
+				
+				int vL = lineValues.length;
+//				for (int s = 0; s < vL; s++) {
+					for (int i = 0; i < ValueMatrix.length; i++) {
+						for (int j = 0; j < ValueMatrix[0].length; j++) {
+
+							//
+
+							ValueMatrix[i][j] = lineValues[i*100+j];
+							//
+							// System.out.println("lineValues[j]"+j+":"+lineValues[j]);
+							// System.out.println("ValueMatrix[s][j]"+s+":"+j+":"+lineValues[j]);
+//							 System.out.println(s+":"+lineValues[s]);
+						}
+					}
+//				}
+				
+				
 				read.close();
 				return ValueMatrix;
 

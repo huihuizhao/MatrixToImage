@@ -10,7 +10,7 @@ public class MainClass {
 
 		String[][] MatrixArray = ReadData.readTxtFile(filePath);
 		// double[][] dblMatrixArray1 = new double[10][10];
-		double[][] dblMatrixArray = new double[10][10];
+		double[][] dblMatrixArray = new double[100][100];
 		for (int i = 0; i < MatrixArray.length; i++) {
 			for (int j = 0; j < MatrixArray[0].length; j++) {
 				dblMatrixArray[i][j] = Double.valueOf(MatrixArray[i][j])*100;
