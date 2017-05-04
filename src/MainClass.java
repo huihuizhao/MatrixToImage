@@ -5,8 +5,8 @@ public class MainClass {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
-		String filePath = "C:/Users/zhaohuihui/workspace/MatrixToImage/MatrixData01.txt";
-		String filedir = "C:/Users/zhaohuihui/workspace/MatrixToImage/profileImage01.jpg";
+		String filePath = "D:/GitHub/MatrixToImage/MatrixData04.txt";
+		String filedir = "D:/GitHub/MatrixToImage/profileImage04.jpg";
 
 		String[][] MatrixArray = ReadData.readTxtFile(filePath);
 		// double[][] dblMatrixArray1 = new double[10][10];
